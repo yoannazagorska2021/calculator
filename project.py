@@ -1,5 +1,6 @@
 import tkinter as tk  # Импортиране на модула tkinter и задаване на псевдоним tk
 
+
 def get_operands(stack):
     """ Pop two operands from the stack and return them. """
     return stack.pop(), stack.pop()  # Изваждане на два операнда от стека и връщане на тях
@@ -23,11 +24,6 @@ def op_multiply(stack):
 def op_divide(stack):
     x, y = get_operands(stack)  # Извличане на операндите от стека
     stack.append(y / x)  # Добавяне на частното на операндите в стека
-
-
-def op_power(stack):
-    x, y = get_operands(stack)  # Извличане на операндите от стека
-    stack.append(y ** x)  # Добавяне на степента на операндите в стека
 
 
 def evaluate_expression():
@@ -125,7 +121,6 @@ operators = {
     "-": op_minus,  # Оператор "-"
     "*": op_multiply,  # Оператор "*"
     "/": op_divide,  # Оператор "/"
-    "**": op_power  # Оператор "**"
 }
 
 display_entry.focus_set()  # Фокусиране на текстовото поле за незабавен вход
